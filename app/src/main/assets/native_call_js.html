@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Android调用js</title>
+</head>
+<body>
+
+<script>
+function changeImage()
+{
+	element=document.getElementById('myimage')
+	if (element.src.match("bulbon"))
+ 	{
+  		element.src="pic_bulboff.gif";
+  	}
+	else
+   {
+  		element.src="pic_bulbon.gif";
+   }
+}
+</script>
+<div style="text-align: center;border: green solid 1px;">
+<img id="myimage"
+     src="pic_bulboff.gif" width="100" height="180">
+</div>
+</body>
+</html>

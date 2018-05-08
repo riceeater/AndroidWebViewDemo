@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>js调用Android</title>
+</head>
+<body>
+<script>
+function callAndroid() {
+    <!-- android是对象映射时设置的名称 -->
+    android.getPhoneBand();
+}
+function callAndroidByWebClient() {
+    <!-- 定义好协议 -->
+    document.location = "xylitolz://toastHello?arg=2000";
+}
+function callAndroidByWebViewChromeClient() {
+    alert("WebViewChromeClient");
+}
+</script>
+<div style="text-align:center;border: green solid 1px;">
+<button style="margin-top:10px;" type="button" onclick="callAndroid()">使用addJavascriptInterface调用Android方法</button>
+<button style="margin-top:10px;" type="button" onclick="callAndroidByWebClient()">使用shouldOverrideUrlLoading调用Android方法</button>
+<button style="margin-top:10px;margin-bottom:10px;" type="button" onclick="callAndroidByWebViewChromeClient()">使用webViewChromeClient调用Android方法</button>
+</div>
+</body>
+</html>
